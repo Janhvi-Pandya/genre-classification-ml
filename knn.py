@@ -253,7 +253,7 @@ def main():
         print("Final testing score: " + str(accuracy_score(finalPredictions, orderedLabels) * 100) + "%.")
 
         with open("results.txt", "w") as f:
-        f.write(f"Final Accuracy: {accuracy_score(finalPredictions, orderedLabels) * 100:.2f}%\n")
+            f.write(f"Final Accuracy: {accuracy_score(finalPredictions, orderedLabels) * 100:.2f}%\n")
 
         print("\nFinished execution of knn.py.")
 
