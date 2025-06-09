@@ -3,6 +3,7 @@
 #Last Updated 2025-03-26
 
 #Dependencies
+import os
 import kagglehub #pip install kagglehub
 import matplotlib.pyplot as plt #pip install matplotlib
 import numpy as np #pip install numpy
@@ -39,7 +40,7 @@ def main():
     #https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks
     #Ensure the latest version of the dataset is downloaded.
     path = kagglehub.dataset_download("amitanshjoshi/spotify-1million-tracks") #If this is failing for some reason, look in: C:\Users\(insert user name here)\.cache\kagglehub\datasets\amitanshjoshi\spotify-1million-tracks\versions\1
-    path += "\spotify_data.csv" #Ensure path points to the CSV file instead of the directory
+    path = os.path.join(path, "spotify_data.csv") #Ensure path points to the CSV file instead of the directory
 
     if debug == 1:
         print("Path to dataset files:", path)
