@@ -251,11 +251,11 @@ def main():
         finalPredictions = pd.DataFrame(finalPredictions)
         orderedLabels = pd.concat([yGroup1Data, yGroup2Data, yGroup3Data, yGroup4Data])
         print("Final testing score: " + str(accuracy_score(finalPredictions, orderedLabels) * 100) + "%.")
-        
-         with open("results.txt", "w") as f:
-    f.write(f"Final Accuracy: {accuracy_score(finalPredictions, orderedLabels) * 100:.2f}%\n")
 
-    print("\nFinished execution of knn.py.")
+        with open("results.txt", "w") as f:
+        f.write(f"Final Accuracy: {accuracy_score(finalPredictions, orderedLabels) * 100:.2f}%\n")
+
+        print("\nFinished execution of knn.py.")
 
 def calculateClusterCenter(data):
 
