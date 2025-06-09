@@ -654,6 +654,13 @@ def trainKNNClassifier(xTrain, yTrain, k = idealNeighbors, weighting = idealWeig
     KNNClassifier.fit(xTrain, yTrain)
 
     return KNNClassifier
+    
+print("Final testing score: " + str(accuracy_score(finalPredictions, orderedLabels) * 100) + "%.")
+
+with open("results.txt", "w") as f:
+    f.write(f"Final Accuracy: {accuracy_score(finalPredictions, orderedLabels) * 100:.2f}%\n")
+
+print("\nFinished execution of knn.py.")
 
 
 if __name__ == "__main__":
